@@ -6,8 +6,15 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import csrf_protect
+from django.http import HttpResponse
+from django.template import loader
 
 # Views start from here.
+def render_homepage(request):
+    template = loader.get_template('home.html')
+    return HttpResponse(template.render())
+
+
 @csrf_protect
 @csrf_exempt
 def predict_price(request):
