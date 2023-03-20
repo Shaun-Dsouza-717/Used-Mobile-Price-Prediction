@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 django = "*"
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
 
 [dev-packages]
 

@@ -1,7 +1,6 @@
 #  Import Modules
 import json
-import pickle
-import os
+from . import utils
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -25,23 +24,29 @@ def predict_price(request):
 
         # Access the data in the JSON object
         my_data = json_data["device"]
+        # my_data = json_data
 
-        
-        print(os.getcwd())
+        my_data['device_code'] = utils.get_brand_code(my_data['device_brand'])
+
+        train_cols, scalar, model = utils.get_prods()
+
+        preds = utils.predict_device_used_price(my_data,train_cols,scalar,model)*100
         # absolute_path = os.path.dirname(os.path.abspath(__file__))
         # pickle_path = os.path.join(absolute_path, '/model.pickle')
         # print(absolute_path)
 
         # with open('model.pickle', 'rb') as f:
         #     predict_function, train_cols, scalar, model = pickle.load(f)
-        
+        print(preds)
 
         # print(train_cols)
         
         # Validate and process the data
+
+
         if my_data:
-            processed_data = my_data
-            return JsonResponse(processed_data, status=200)
+            processed_data = preds
+            return JsonResponse({"value":processed_data}, status=200)
         else:
             return JsonResponse({'error': 'Missing data in request'}, status=400)
     else:
