@@ -1,7 +1,6 @@
 #  Import Modules
 import json
-import pickle
-import os
+from . import utils
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -26,8 +25,9 @@ def predict_price(request):
         # Access the data in the JSON object
         my_data = json_data["device"]
 
-        
-        print(os.getcwd())
+        train_cols, scalar, model = get_prods()
+
+        print(train_cols)
         # absolute_path = os.path.dirname(os.path.abspath(__file__))
         # pickle_path = os.path.join(absolute_path, '/model.pickle')
         # print(absolute_path)
