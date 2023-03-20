@@ -63,7 +63,47 @@ def predict_device_used_price(device,train_cols,scalar,model):
 
 def get_prods():
     # Load the pickled objects into memory
-    with open('./wodel.pickle', 'rb') as f:
+    with open('./price_predictor/wodel.pickle', 'rb') as f:
         train_cols, scalar, model = pickle.load(f)
 
     return train_cols, scalar, model
+
+
+brand_to_code = {'Honor': 10,
+ 'Others': 23,
+ 'HTC': 9,
+ 'Huawei': 11,
+ 'Lava': 14,
+ 'Lenovo': 15,
+ 'LG': 13,
+ 'Micromax': 17,
+ 'Nokia': 20,
+ 'Oppo': 22,
+ 'Samsung': 26,
+ 'Vivo': 29,
+ 'Xiaomi': 31,
+ 'ZTE': 32,
+ 'Apple': 2,
+ 'Asus': 3,
+ 'Alcatel': 1,
+ 'Acer': 0,
+ 'BlackBerry': 4,
+ 'Celkon': 5,
+ 'Coolpad': 6,
+ 'Gionee': 7,
+ 'Google': 8,
+ 'Karbonn': 12,
+ 'Meizu': 16,
+ 'Microsoft': 18,
+ 'Motorola': 19,
+ 'OnePlus': 21,
+ 'Panasonic': 24,
+ 'Realme': 25,
+ 'Sony': 27,
+ 'Spice': 28,
+ 'XOLO': 30}
+
+
+def get_brand_code(brand):
+  device_code = brand_to_code.get(brand, -1)
+  return device_code
