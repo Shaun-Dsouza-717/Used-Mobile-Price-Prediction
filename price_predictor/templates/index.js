@@ -89,5 +89,5 @@ for (var i = 0; i < options.length; i++) {
   select.appendChild(el);
 }
 
-{% comment %} Input Fields {% endcomment %}
+
 
