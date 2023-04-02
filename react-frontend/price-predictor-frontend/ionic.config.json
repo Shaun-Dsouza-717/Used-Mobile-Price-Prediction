@@ -1,0 +1,7 @@
+{
+  "name": "price-predictor-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

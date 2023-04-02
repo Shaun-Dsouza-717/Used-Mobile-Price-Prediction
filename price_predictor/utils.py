@@ -34,29 +34,21 @@ def predict_device_used_price(device,train_cols,scalar,model):
   pred_ohe_df = pd.get_dummies(pred_df,None,"_",columns=['os', '4g', '5g', 'device_type'])
   print("step 2 passed")
 
-# Getting the columns of the predicted values after encoding
-  columns_encoded = pred_ohe_df.columns.tolist()
-  print("step 3 passed")
-
-# Getting all the columns present in train and absent in prediction
-  columns_missing = list(set(train_cols) - set(columns_encoded))
-  print("step 4 passed")
-
 # Filling all the missing columns with 0 to match the pred cols with the test cols
   pred_ohe_df = pred_ohe_df.reindex(columns=train_cols,fill_value=0)
-  print("step 5 passed")
+  print("step 3 passed")
 
 # Removing unwanted columns
   drop_cols = ['device_brand','normalized_used_price']
   X = pred_ohe_df.drop(columns=drop_cols,axis=1)
-  print("step 6 passed")
+  print("step 4 passed")
 
 # Standardizing the values of prediction 
   pred_scaled = scalar.transform(X)
-  print("step 7 passed")
+  print("step 5 passed")
 # Predicting the values and returning the final used_price
   y_pred = model.predict(pred_scaled)
-  print("step 8 passed")
+  print("step 6 passed")
 
   return y_pred[0]
 

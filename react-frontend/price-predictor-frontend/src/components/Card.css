@@ -1,0 +1,136 @@
+/* .main-container{
+    width:1095px;
+    height:573px;
+    background: #2B6ADF;
+} */
+
+.main-container{
+position: absolute;
+width: 1095px;
+height: 573px;
+left: 205px;
+top: 65px;
+background: #2B6ADF;
+border-radius: 0;
+display:flex;
+align-items: center;
+}
+
+.text-container{
+    width: 465px;
+    height: 573px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2B6ADF;
+    z-index: 2;
+}
+
+
+.img-container{
+    width: 630px;
+    height: 573px;
+    /* background:url("../images/sliderimg1.png"); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transition: ease 2s;
+}
+
+.text-header{
+width: 324px;
+height: 41px;
+font-family: 'Domine', serif;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 41px;
+text-align: center;
+color: #FFFFFF;
+}
+
+.select-option{
+    width: 359px;
+    justify-content: center;
+}
+
+.text-label{
+    position: relative;
+    bottom: 5px;
+    width: 359px;
+    height: 23px;
+    font-family: 'Domine';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FCFED1;
+    display: flex;
+    justify-content: left;
+}
+
+.next-btn{
+    width: 98px;
+    height: 44px;
+    font-family: 'Domine';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 20px;
+    text-transform: none;
+    --background: white;
+    --color: #2B6ADF;
+    --border-radius: 0;
+}
+
+.network-container{
+    /* width: 359px; */
+    display: flex;
+    /* justify-content: space-between; */
+    gap:41px;
+}
+
+.select-network{
+    width: 159px;
+    justify-content: center;
+}
+
+.network{
+    width: 159px;
+    font-family: 'Domine';
+}
+
+.button-container{
+    /* width: 359px; */
+    display: flex;
+    gap: 163px;
+}
+
+ion-select{
+  width:100%;
+  max-width: 100% !important;
+  padding-left:0px;
+}
+
+.results-text{
+font-family: 'Domine';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 5px;
+    text-transform: none;
+    color: white;
+    width: 90%;
+    text-align: center;
+}
+
+.results-value{
+    font-family: 'Domine';
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: none;
+    color:#39FF14;
+
+}
