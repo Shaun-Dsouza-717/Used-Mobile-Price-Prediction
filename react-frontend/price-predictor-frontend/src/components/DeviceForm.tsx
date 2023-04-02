@@ -51,7 +51,10 @@ const DeviceForm: React.FC<FormProps> = ({formDetails,setFormDetails}) => {
             interface="popover"
             placeholder="Select"
             onIonChange={(e) =>
-              setFormDetails({ ...formDetails, device_brand: e.target.value })
+              setFormDetails({
+                ...formDetails, device_brand: e.target.value, os: e.target.value === 'Apple' ? 
+              'iOS' : ''
+              })
             }
             value={formDetails.device_brand}
           >
@@ -74,10 +77,11 @@ const DeviceForm: React.FC<FormProps> = ({formDetails,setFormDetails}) => {
             }
             value={formDetails.os}
           >
-            <IonSelectOption value="iOS">iOS</IonSelectOption>
-            <IonSelectOption value="Android">Android</IonSelectOption>
+            {formDetails.device_brand === 'Apple' ? <IonSelectOption value="iOS">iOS</IonSelectOption> :
+            <><IonSelectOption value="Android">Android</IonSelectOption>
             <IonSelectOption value="Windows">Windows</IonSelectOption>
-            <IonSelectOption value="Others">Others</IonSelectOption>
+            <IonSelectOption value="Others">Others</IonSelectOption></>
+            }
           </IonSelect>
         </IonItem>
       </div>

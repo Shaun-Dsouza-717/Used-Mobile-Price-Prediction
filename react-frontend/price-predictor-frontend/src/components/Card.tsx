@@ -92,6 +92,7 @@ const formComponents = [
     if (currentForm < formComponents.length - 1) {
       setCurrentForm(currentForm + 1);
     }
+    console.log(formDetails);
   };
 
   const handleBack = () => {
@@ -200,7 +201,7 @@ const formComponents = [
               onClick={onClear}
               style={{ width: 282, height: 50 }}
             >
-              Predict another device ?
+              Predict another device
             </IonButton>
           )}
         </div>
