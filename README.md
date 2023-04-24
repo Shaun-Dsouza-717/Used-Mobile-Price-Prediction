@@ -1,10 +1,10 @@
 # Used-Mobile-Price-Prediction
 
 <p align="center">
-  <h2 align="center">REAL ESTATE PRICE PREDICTION</h2>
+  <h2 align="center">Used Mobile Price Prediction</h2>
 
   <p align="center">
-    This Project is a Real Estate Price Prediction using Machine Learning.
+    This Project is a Used Mobile Price Prediction using Machine Learning.
   </p>
 </p>
 
@@ -15,8 +15,6 @@
 * [Getting Started](#getting-started)
   * [Pre-requisites](#pre-requisites)
 * [Installation](#installation)
-* [License](#license)
-* [Contributing Guidelines](#contributing-guidlines)
 
 ## Project Introduction
 
@@ -44,7 +42,12 @@ The Project has an interactive website build using Ionic React and a Django Serv
 In the Website the User Must Enter Various Fields related to the hardware and software of a device along with its actual new price and the year of purchase.
 After entering the details, the user can click on the Predict button to get the predicted price of the device.
 
-![frontend]
+## Frontend
+![Frontend](https://user-images.githubusercontent.com/101418323/234100296-eb803dc7-5139-4b20-9242-0080328a6274.png)
+
+## Predicted Result
+![Result](https://user-images.githubusercontent.com/101418323/234100403-5753ce6d-345d-41fd-9b31-a6a11d06caaf.png)
+
 
 
 ## Getting Started 
@@ -103,6 +106,6 @@ $  ionic serve
 ```
 
 ---
-The dataset used in this project is from Kaggle which is the ["Used handheld device data"](https://www.kaggle.com/datasets/ahsan81/used-handheld-device-data).
+The dataset used in this project is from Kaggle which is the [Used handheld device data](https://www.kaggle.com/datasets/ahsan81/used-handheld-device-data).
 
 ---
