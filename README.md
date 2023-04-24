@@ -83,7 +83,7 @@ $  pipenv shell
 git clone 
 ```
 
-Then, Enter the project
+Then, Enter into the project
 ```
 cd Used-Mobile-Price-Prediction
 ```
@@ -95,7 +95,12 @@ cd Used-Mobile-Price-Prediction
 $  python manage.py runserver
 ```
 
-* cd react-frontend & cd price-predictor-frontend.
+Then, Enter into the frontend
+```
+$  cd react-frontend/price-predictor-frontend
+```
+
+Install necessary dependencies
 ```
 $  npm install
 ```
