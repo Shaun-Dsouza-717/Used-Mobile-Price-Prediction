@@ -121,8 +121,6 @@ const formComponents = [
       }
 
       const responseData = await response.json();
-      // console.log("API response:", responseData);
-      responseData.price = Math.round(responseData.price * 100) / 100 - 100;
       setPrice(Math.round(responseData.price * 100) / 100);
       setCurrentForm(currentForm + 1);
     } catch (error) {
