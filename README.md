@@ -90,7 +90,7 @@ cd Used-Mobile-Price-Prediction
 
 **5. Run the project**
 
-* Start Flask Backend Server (In the virtual environment):
+* Start Django Backend Server (In the virtual environment):
 ```
 $  python manage.py runserver
 ```
